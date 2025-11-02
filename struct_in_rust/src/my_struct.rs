@@ -30,6 +30,10 @@ struct Vehicle {
     is_electric: bool,
 }
 
+// representing a struct fiels as a tupple struct
+#[derive(Debug)]
+#[allow(dead_code)]
+struct VehicleTupple(String, String, u16, VehicleColors, bool);
 
 
  fn new_person() -> Person {
@@ -52,7 +56,7 @@ pub fn create_person() {
 
 
 
-fn new_vihicle() -> Vehicle {
+fn new_vehicle() -> Vehicle {
    let v1 = Vehicle{
        manufacturer: "Tesla".to_string(),
        model: "Model 3".to_string(),
@@ -64,6 +68,16 @@ fn new_vihicle() -> Vehicle {
 }
 
  pub fn create_new_vehicle() {
-   let my_vehicle = new_vihicle();
+   let my_vehicle = new_vehicle();
    println!("{:?}", my_vehicle);
+}
+
+
+// vehicle tuple //
+fn new_vehicle_tupple() -> VehicleTupple {
+   return VehicleTupple("Benz".to_string(), "GLK 350".to_string (), 2020, VehicleColors::Blue, true);
+}   
+
+pub fn create_new_vehicletupple () {
+   println!("{:?}", new_vehicle_tupple());
 }
