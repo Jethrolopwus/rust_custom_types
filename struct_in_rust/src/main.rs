@@ -1,8 +1,9 @@
-use crate::my_struct::create_person;
- mod my_struct;
+use crate::my_struct::{ create_person,create_new_vehicle};
+pub mod my_struct;
 
 
 fn main() {
 
   create_person();
+  create_new_vehicle();
 }
